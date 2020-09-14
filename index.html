@@ -4,11 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b61e22954.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <section class="container">
+        <header>
+            <h1>Your<i class="far fa-sticky-note"></i><span>Notes</span></h1>
+        </header>
+        <label for="note-title" class='label'>Enter Note Title</label>
+        <input type="text" id="note-title" onfocus="this.value=''">
+        <label for="content" class='label'>Enter Note Content</label>
+        <textarea name="content" id="note-content" cols="30" rows="10"></textarea>
+        <i class="fas fa-angle-double-down down"></i>
+        <i class="fas fa-arrow-right right"></i>
+    </section>
+    <section class="container_sec">
+        <h2>Your notes will go here!</h2>
+    </section>
+    <script src="index.js"></script>
 </body>
 
 </html>

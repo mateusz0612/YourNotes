@@ -1,3 +1,179 @@
 * {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
     font-size: 10px;
+    font-family: 'Grandstander', cursive;
+    /* overflow-y: hidden; */
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #A1B5D8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container i {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.right {
+    display: none;
+}
+
+header {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 20px;
+}
+
+header i {
+    margin: 0px 10px;
+}
+
+.label {
+    font-size: 3rem;
+    padding: 20px;
+}
+
+#note-title {
+    width: 80%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 2.5rem;
+}
+
+#note-content {
+    width: 80%;
+    height: 45vh;
+    outline: none;
+    border-radius: 20px;
+    padding: 15px 10px;
+    font-size: 2rem;
+    text-align: justify;
+    border: none;
+}
+
+.container_sec {
+    height: 100vh;
+    width: 100vw;
+    background-color: #738290;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_sec h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.note {
+    width: 80%;
+    min-height: 150px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    background-image: url(images/noteBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    font-size: 2.5rem;
+}
+
+
+@media (min-height: 600px) {
+    #note-title {
+        height: 55px;
+    }
+
+    #note-content {
+        height: 55vh;
+    }
+}
+
+@media (min-width: 768px) and (min-height: 1020px) {
+    header {
+        font-size: 7rem;
+    }
+
+    .container header h1 i {
+        font-size: 5rem;
+    }
+
+    .label {
+        font-size: 5rem;
+    }
+
+    .container i {
+        font-size: 4rem;
+    }
+
+    .container_sec h2 {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+    header {
+        font-size: 9rem;
+    }
+
+    .container header h1 i {
+        font-size: 7rem;
+    }
+
+    .label {
+        font-size: 7rem;
+    }
+
+    .container i {
+        font-size: 6rem;
+        margin-top: 35px;
+        margin-bottom: 0px;
+    }
+
+    .container_sec h2 {
+        font-size: 7rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 50vw;
+        float: left;
+    }
+
+    .down {
+        display: none;
+    }
+
+    .right {
+        display: block;
+    }
+
+    .container_sec {
+        width: 50vw;
+        float: left;
+    }
 }
