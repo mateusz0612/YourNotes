@@ -27,15 +27,24 @@ body::-webkit-scrollbar {
     flex-direction: column;
 }
 
-.container i {
+.icons {
     font-size: 2.5rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
+}
+
+.down {
+    float: left;
+}
+
+.plus {
+    float: left;
+    margin-left: 25px;
 }
 
 .right {
     display: none;
 }
+
 
 header {
     text-align: center;
@@ -110,6 +119,14 @@ header i {
     #note-content {
         height: 55vh;
     }
+
+    .icons {
+        font-size: 3rem;
+    }
+
+    .plus {
+        margin-left: 3rem;
+    }
 }
 
 @media (min-width: 768px) and (min-height: 1020px) {
@@ -131,6 +148,14 @@ header i {
 
     .container_sec h2 {
         font-size: 5rem;
+    }
+
+    .icons {
+        font-size: 5rem;
+    }
+
+    .plus {
+        margin-left: 4rem;
     }
 }
 
@@ -156,6 +181,14 @@ header i {
     .container_sec h2 {
         font-size: 7rem;
     }
+
+    .icons {
+        margin: 0px;
+    }
+
+    .plus {
+        margin-left: 6rem;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -170,10 +203,19 @@ header i {
 
     .right {
         display: block;
+        float: right;
+    }
+
+    .plus {
+        float: right;
     }
 
     .container_sec {
         width: 50vw;
+        float: left;
+    }
+
+    .note {
         float: left;
     }
 }
