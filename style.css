@@ -12,6 +12,7 @@ html {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: #A1B5D8;
 }
 
 body::-webkit-scrollbar {
@@ -39,6 +40,10 @@ body::-webkit-scrollbar {
 .plus {
     float: left;
     margin-left: 25px;
+}
+
+.plus:hover {
+    cursor: pointer;
 }
 
 .right {
@@ -69,6 +74,7 @@ header i {
     border-radius: 20px;
     padding: 10px;
     font-size: 2.5rem;
+    font-family: 'Grandstander', cursive;
 }
 
 #note-content {
@@ -80,10 +86,11 @@ header i {
     font-size: 2rem;
     text-align: justify;
     border: none;
+    font-family: 'Grandstander', cursive;
 }
 
 .container_sec {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: #738290;
     display: flex;
@@ -97,19 +104,42 @@ header i {
     padding: 20px;
 }
 
-.note {
-    width: 80%;
-    min-height: 150px;
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    background-image: url(images/noteBackground.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+.remove {
+    font-size: 3rem;
     padding: 20px;
-    font-size: 2.5rem;
+    font-family: 'Grandstander', cursive;
+    border: 1px solid gray;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fcf5f5;
 }
 
+.remove:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.note {
+    word-wrap: break-word;
+    width: 80%;
+    min-height: 200px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    background-image: url(images/noteBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2.5rem;
+    margin: 10px 0px;
+}
+
+.noteH2 {
+    text-align: center;
+}
+
+.noteP {
+    padding: 0px 20px 20px 20px;
+}
 
 @media (min-height: 600px) {
     #note-title {
@@ -150,12 +180,34 @@ header i {
         font-size: 5rem;
     }
 
+    .note {
+        min-height: 400px;
+    }
+
+    #note-title,
+    #note-content {
+        padding: 10px 20px;
+    }
+
+    #note-title,
+    #note-content,
+    .noteP {
+        font-size: 4rem;
+    }
+
     .icons {
         font-size: 5rem;
     }
 
     .plus {
         margin-left: 4rem;
+    }
+
+    .remove {
+        width: 65%;
+        font-size: 5rem;
+        padding: 40px;
+        margin-top: 10px;
     }
 }
 
@@ -189,6 +241,14 @@ header i {
     .plus {
         margin-left: 6rem;
     }
+
+    .note {
+        margin: 20px 0px;
+    }
+
+    .note:first-of-type {
+        margin-top: 40px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -216,6 +276,14 @@ header i {
     }
 
     .note {
-        float: left;
+        width: 40vw;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1600px) {
+    .icons {
+        font-size: 6rem;
+        margin-top: 25px;
     }
 }
