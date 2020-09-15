@@ -18,17 +18,28 @@ const clearInputs = () => {
 }
 
 const createNote = (title, content) => {
+    //creating elements
     const mainNote = document.createElement('div');
-    mainNote.classList.add('note');
     const h2Element = document.createElement('h2');
     const pElement = document.createElement('p');
+    const closeMark = document.createElement('div');
+    //adding classes
+    mainNote.classList.add('note');
     h2Element.classList.add('noteH2');
     pElement.classList.add('noteP');
+    closeMark.classList.add('note-close-mark');
+    //eventlistener that handles removing note
+    closeMark.addEventListener('click', () => {
+        mainNote.remove();
+    })
+    //adding content
     h2Element.textContent = title.toUpperCase();
     pElement.textContent = content;
+    mainNote.appendChild(closeMark);
     mainNote.appendChild(h2Element);
     mainNote.appendChild(pElement);
     noteContainer.appendChild(mainNote);
+    //adding value
     const valueObject = {
         "title": title,
         "content": content
@@ -48,7 +59,7 @@ const addToStorage = () => {
     localStorage.setItem("counter", counter);
 };
 
-const takeFromStorage = () => {
+const displayStorageItems = () => {
     const notes = JSON.parse(localStorage.getItem("items"));
     const counter = localStorage.getItem("counter");
     for (let i = 0; i < counter; i++) {
@@ -76,4 +87,4 @@ removeBtn.addEventListener('click', () => {
 
 
 window.addEventListener('beforeunload', addToStorage);
-window.addEventListener('onload', takeFromStorage());
+window.addEventListener('onload', displayStorageItems());
