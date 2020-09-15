@@ -6,7 +6,6 @@
 html {
     font-size: 10px;
     font-family: 'Grandstander', cursive;
-    /* overflow-y: hidden; */
 }
 
 body {
@@ -119,6 +118,13 @@ header i {
     background-color: white;
 }
 
+footer {
+    width: 100vw;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .note {
     word-wrap: break-word;
     width: 80%;
@@ -225,6 +231,10 @@ header i {
         padding: 40px;
         margin-top: 10px;
     }
+
+    footer {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 1024px) and (min-height: 1366px) {
@@ -265,6 +275,10 @@ header i {
     .note:first-of-type {
         margin-top: 40px;
     }
+
+    footer {
+        font-size: 2.5rem;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -294,6 +308,18 @@ header i {
     .note {
         width: 40vw;
         display: inline-block;
+    }
+
+    .note:first-of-type {
+        margin-top: 20px;
+    }
+
+    .note:last-of-type {
+        margin-bottom: 25px;
+    }
+
+    footer {
+        font-size: 2rem;
     }
 }
 
