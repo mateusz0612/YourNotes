@@ -3,9 +3,9 @@
 YourNotes is JavaScript/HTML/CSS application to store user's notes.
 
 ## Features
--User can add note (note will be stored in LocalStorage)
--User can remove single note
--User can remove all notes
+-User can add note (note will be stored in LocalStorage)\
+-User can remove single note\
+-User can remove all notes\
 
 ## Reflection 
 
